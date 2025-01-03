@@ -43,15 +43,14 @@ jobs:
         run: |
           echo $GDRIVE_CREDENTIALS_DATA > credentials.json
 
-      - name: Configure DVC Remote
-        run: |
-          uv run dvc remote add -d --force myremote gdrive://146F6GcfeT8Zy9I6Ill_TAFFlVZLadkjp 
+      # - name: Configure DVC Remote
+      #   run: |
+      #     uv run dvc remote add -d --force myremote gdrive://146F6GcfeT8Zy9I6Ill_TAFFlVZLadkjp 
 
       - name: Modify DVC Remote
         run: |
           uv run dvc remote modify --local myremote gdrive_service_account_json_file_path credentials.json
-          uv run dvc remote modify myremote gdrive_use_service_account true
-          dvc remote modify myremote gdrive_acknowledge_abuse true
+       
     
       - name: DVC Pull Data
         run: |
