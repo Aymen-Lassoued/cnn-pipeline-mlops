@@ -1,0 +1,7 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = gdrive://1085ZaBXpuAktyEwxPmmOJaPkdvYStZ62
+    gdrive_use_service_account = true
+    gdrive_acknowledge_abuse = true
+    gdrive_service_account_json_file_path = C:/Users/aymen/Downloads/keen-mission-446711-c1-f25c71876184.json
